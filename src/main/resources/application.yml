@@ -1,0 +1,5 @@
+microservice.contextPath: /api/v1/hackernews
+server.port: 8081
+hazelcast.ttl: 10
+hacker.news.topstories.url: https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty
+hacker.news.topstory.description.url: https://hacker-news.firebaseio.com/v0/item/{storyId}.json?print=pretty
