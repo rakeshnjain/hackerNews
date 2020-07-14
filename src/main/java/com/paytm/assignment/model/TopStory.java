@@ -1,19 +1,43 @@
 package com.paytm.assignment.model;
 
-
-import org.springframework.stereotype.Component;
-
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 
-
-@Component
+@Entity
+@Table(name = "top_stories")
 public class TopStory implements Comparable<TopStory>,Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    @Column(name = "title")
     private String title;
+
+    @Column(name = "url")
     private String url;
+
+    @Column(name = "score")
     private Integer score;
+
+    @Column(name = "time")
     private String time;
+
+    @Column(name = "by")
     private String by;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;

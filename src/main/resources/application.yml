@@ -3,3 +3,9 @@ server.port: 8081
 hazelcast.ttl: 10
 hacker.news.topstories.url: https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty
 hacker.news.topstory.description.url: https://hacker-news.firebaseio.com/v0/item/{storyId}.json?print=pretty
+
+spring.datasource.url: jdbc:h2:mem:testdb
+spring.datasource.driverClassName: org.h2.Driver
+spring.datasource.username: sa
+spring.datasource.password:
+spring.jpa.database-platform: org.hibernate.dialect.H2Dialect

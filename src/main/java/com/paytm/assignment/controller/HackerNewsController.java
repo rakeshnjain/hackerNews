@@ -19,7 +19,13 @@ public class HackerNewsController {
     HackerNewsService hackerNewsService;
 
     @GetMapping("/top-stories")
-    public List<TopStory> getAllProductIdsByPpId() {
+    public List<TopStory> getTopStories() {
         return hackerNewsService.getTopStories();
+    }
+
+
+    @GetMapping("/past-stories ")
+    public List<TopStory> getPastStories() {
+        return hackerNewsService.getPastStories();
     }
 }

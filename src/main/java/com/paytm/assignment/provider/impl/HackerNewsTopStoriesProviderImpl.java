@@ -59,6 +59,7 @@ public class HackerNewsTopStoriesProviderImpl {
             topStoryList.add(topStoryObservable.toBlocking().single());
         });
         Collections.sort(topStoryList);
+
         hazelCastCacheProvide.put(TOP_STORIES_MAP,TOP10_STORIES_KEY,
                 new ArrayList<TopStory>(topStoryList.subList(0, 10)),hazelcastTtl, TimeUnit.MINUTES);
         return topStoryList.subList(0,10);
@@ -76,7 +77,5 @@ public class HackerNewsTopStoriesProviderImpl {
     private void logTime(String s) {
         System.out.println(s);
     }
-
-
 
 }
