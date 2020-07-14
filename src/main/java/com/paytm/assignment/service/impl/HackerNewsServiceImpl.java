@@ -16,7 +16,7 @@ public class HackerNewsServiceImpl implements HackerNewsService{
     public static final String TOP_STORIES_MAP = "topStories";
     public static final String TOP10_STORIES_KEY = "TOP10";
 
-    @Autowired(required=false)
+    @Autowired
     TopStoryRepository topStoryRepository;
 
     @Autowired
@@ -47,6 +47,6 @@ public class HackerNewsServiceImpl implements HackerNewsService{
 
     @Override
     public void saveTopStory(List<TopStory> topStories) {
-         topStoryRepository.save(topStories.get(0));
+         topStoryRepository.saveAll(topStories);
     }
 }

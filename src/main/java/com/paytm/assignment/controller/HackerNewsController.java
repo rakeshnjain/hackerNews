@@ -24,7 +24,7 @@ public class HackerNewsController {
     }
 
 
-    @GetMapping("/past-stories ")
+    @GetMapping("/past-stories")
     public List<TopStory> getPastStories() {
         return hackerNewsService.getPastStories();
     }
