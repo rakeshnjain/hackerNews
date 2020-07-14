@@ -2,6 +2,8 @@
 
 ## Overview
 
+We are using spring boot framework and gradle for build application.
+
 We are using hazelcast to cache java object. We are calling HN https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty end point which give top 500 stories ids.
 We are using Rxjava and parallel stream to get top 10 scores story out of 500 stories and puting top 10 story in hazelcast map with name 'topStories' for 10 minutes TTL.
 There is no HN api call for next 10 minutes so we have only one HN call for top stories in 10 minutes.
